@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * version: 3.0.17
+ * version: 3.0.18
  */
 var VERSION = '3.0.16';
 angular.module('ngWig', ['ngwig-app-templates']);
@@ -164,10 +164,11 @@ angular.module('ngWig').provider('ngWigToolbar', function () {
     list2: { title: 'Ordered List', command: 'insertorderedlist', styleClass: 'list-ol' },
     bold: { title: 'Bold', command: 'bold', styleClass: 'bold' },
     italic: { title: 'Italic', command: 'italic', styleClass: 'italic' },
-    link: { title: 'Link', command: 'createlink', styleClass: 'link' }
+    link: { title: 'Link', command: 'createlink', styleClass: 'link' },
+    underline: { title: 'Underline', command: 'underline', styleClass: 'fa-underline' }
   };
 
-  var defaultButtonsList = ['list1', 'list2', 'bold', 'italic', 'link'];
+  var defaultButtonsList = ['list1', 'list2', 'bold', 'italic', 'link', 'underline'];
 
   var isButtonActive = function isButtonActive() {
     return !!this.command && document.queryCommandState(this.command);
