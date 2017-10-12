@@ -5,10 +5,11 @@ angular.module('ngWig').provider('ngWigToolbar', function () {
     list2: {title: 'Ordered List', command: 'insertorderedlist', styleClass: 'list-ol'},
     bold: {title: 'Bold', command: 'bold', styleClass: 'bold'},
     italic: {title: 'Italic', command: 'italic', styleClass: 'italic'},
-    link: {title: 'Link', command: 'createlink', styleClass: 'link'}
+    link: {title: 'Link', command: 'createlink', styleClass: 'link'},
+    underline: {title: 'Underline', command: 'underline', styleClass: 'fa-underline'}
   };
 
-  var defaultButtonsList = ['list1', 'list2', 'bold', 'italic', 'link'];
+  var defaultButtonsList = ['list1', 'list2', 'bold', 'italic', 'link', 'underline'];
 
   var isButtonActive = function () {
     return !!this.command && document.queryCommandState(this.command);
